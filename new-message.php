@@ -43,7 +43,7 @@ if (isset($_POST['message'], $_POST['g-recaptcha-response']) && ! empty($_POST['
   }
 }
 ?><!DOCTYPE html>
-<html lang="en">
+<html dir="<?php echo TEXT_DIRECTION; ?>" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,14 +67,14 @@ if (isset($_POST['message'], $_POST['g-recaptcha-response']) && ! empty($_POST['
           <div class="panel panel-default">
             <div class="panel-body">
               <form action="new-message.php" method="POST" role="form" id="form">
-                <legend>Send a new message to <strong><?php echo YOUR_NAME; ?></strong></legend>
+                <legend>Send a new message to <strong><?php echo htmlentities(strip_tags(YOUR_NAME), ENT_QUOTES | ENT_IGNORE, 'UTF-8'); ?></strong></legend>
               
                 <div class="form-group">
                   <label for="">Leave a constructive message</label>
                   <textarea name="message" class="form-control" rows="5" maxlength="700" placeholder="Your message..." required autofocus></textarea>
                 </div>
               
-                <button type="submit" class="btn btn-primary btn-block g-recaptcha" data-sitekey="6LfXvC4UAAAAAKkSguZdwX9E3_lrrMP3bZcD_Isf" data-callback="recaptchaCallback"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Send</button>
+                <button type="submit" class="btn btn-primary btn-block g-recaptcha" data-sitekey="<?php echo RECAPTCHA_SITEKEY; ?>" data-callback="recaptchaCallback"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Send</button>
               </form>
             </div>
           </div>

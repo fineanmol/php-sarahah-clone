@@ -1,0 +1,24 @@
+<?php
+/* Developed by Juno_okyo */
+defined('ROOT') or die('Access denied.');
+
+/* Database */
+define('DB_HOST', '{1}');
+define('DB_USER', '{2}');
+define('DB_PASS', '{3}');
+define('DB_NAME', '{4}');
+
+/* Authentication */
+define('ADMIN_USERNAME', '{5}');
+define('ADMIN_PASSWORD', '{6}');
+
+/* reCaptcha */
+define('RECAPTCHA_SITEKEY', '{7}');
+define('RECAPTCHA_SECRET', '{8}');
+
+/* Share on Facebook */
+define('ACCESS_TOKEN', '{9}');
+
+/* OTHER */
+define('YOUR_NAME', '{10}');
+define('TEXT_DIRECTION', '{11}');
